@@ -1,5 +1,7 @@
 import React from "react";
 import CounterIndex from "./CounterIndex";
+import Reference from "./Reference";
+import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,13 +22,13 @@ export default function App() {
               <Link to="/counter">Counter</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/reference">Reference</Link>
             </li>
           </ul>
         </nav>
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/reference">
+            <Reference />
           </Route>
           <Route path="/counter">
             <CounterIndex />
@@ -42,8 +44,4 @@ export default function App() {
 
 function Home() {
   return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
 }
