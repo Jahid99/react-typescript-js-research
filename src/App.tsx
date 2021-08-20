@@ -1,6 +1,7 @@
 import React from "react";
-import CounterIndex from "./CounterIndex";
-import Reference from "./Reference";
+import CounterIndex from "./Counter/CounterIndex";
+import Reference from "./Reference/Reference";
+import Callback from "./Callback/CallbackIndex";
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -24,9 +25,15 @@ export default function App() {
             <li>
               <Link to="/reference">Reference</Link>
             </li>
+            <li>
+              <Link to="/callback">Callback</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
+          <Route path="/callback">
+            <Callback />
+          </Route>
           <Route path="/reference">
             <Reference />
           </Route>
