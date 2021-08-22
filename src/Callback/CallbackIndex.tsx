@@ -7,16 +7,12 @@ import {
 } from "react-router-dom";
 import { Callback } from "./Callback";
 
-// props
-// hooks
-// render props
-const test = 'ok';
 const CallbackIndex: React.FC = () => {
   return (
     <div>
       <Callback>
         {(test:any) => (
-            <h2>Pathan</h2>
+            <h1>Pathan</h1>
         )}
       </Callback>
     </div>

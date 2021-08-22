@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 
-export const Callback: React.FC = ( children ) => {
-  console.log("Nice", children)
+interface Props {
+  children: ({
+  }) => JSX.Element | null;
+}
 
-  return <h1>JAHID</h1>;
+export const Callback: React.FC<Props> = ( children ) => {
+  console.log("Nice", children.children)
+
+  return <h2>{children.children(1)}</h2>;
 };
