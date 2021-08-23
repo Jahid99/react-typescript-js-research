@@ -8,5 +8,5 @@ interface Props {
 export const Callback: React.FC<Props> = ( children ) => {
   console.log("Nice", children.children)
 
-  return <h2>{children.children(1)}</h2>;
+  return <span>{children.children(1)}</span>;
 };
