@@ -2,6 +2,7 @@ import React from "react";
 import CounterIndex from "./Counter/CounterIndex";
 import Reference from "./Reference/Reference";
 import Callback from "./Callback/CallbackIndex";
+import Console from "./Console/ConsoleIndex";
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -28,9 +29,15 @@ export default function App() {
             <li>
               <Link to="/callback">Callback</Link>
             </li>
+            <li>
+              <Link to="/console">Console</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
+          <Route path="/console">
+            <Console />
+          </Route>
           <Route path="/callback">
             <Callback />
           </Route>
