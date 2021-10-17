@@ -3,6 +3,7 @@ import CounterIndex from "./Counter/CounterIndex";
 import Reference from "./Reference/Reference";
 import Callback from "./Callback/CallbackIndex";
 import Console from "./Console/ConsoleIndex";
+import UseMemoVsUseEffect from "./UseMemoVsUseEffect/UseMemoVsUseEffectIndex";
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -32,9 +33,15 @@ export default function App() {
             <li>
               <Link to="/console">Console</Link>
             </li>
+            <li>
+              <Link to="/memo_effect">UseMemoVsUseEffect</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
+          <Route path="/memo_effect">
+            <UseMemoVsUseEffect />
+          </Route>
           <Route path="/console">
             <Console />
           </Route>
